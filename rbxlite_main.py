@@ -173,8 +173,8 @@ class Account:
             "Cookie": f".ROBLOSECURITY={self.cookie}"
         })
         if rq1.status_code == 200:
-            data = rq1.json()  # Convert response to JSON
-            return data.get("id")  # Extract and return the user ID
+            data = rq1.json()
+            return data.get("id") 
         elif rq1.status_code == 401:
             logger("error", "Unauthorized.")
             exit()
